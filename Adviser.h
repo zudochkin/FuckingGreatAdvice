@@ -1,14 +1,15 @@
 //
-//  ViewController.h
+//  Adviser.h
 //  FuckingGreatAdvice
 //
 //  Created by Dmitry Zudochkin on 3/24/13.
 //  Copyright (c) 2013 Dmitry Zudochkin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *advice;
+@interface Adviser : NSObject
+
+-(NSString *)getRandomAdvice;
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "Adviser.h"
+
 
 @interface ViewController ()
 
@@ -17,7 +19,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    Adviser *adviser = [Adviser alloc];
+    
+	[self.advice setText:[adviser getRandomAdvice]];
 }
 
 - (void)didReceiveMemoryWarning
