@@ -11,18 +11,28 @@
 
 
 @interface ViewController ()
-
+@property (nonatomic, strong) Adviser *adviser;
 @end
 
 @implementation ViewController
+
+@synthesize adviser = _adviser;
+
+- (Adviser *)adviser
+{
+    if (!_adviser) _adviser = [Adviser alloc];
+    
+    return _adviser;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-    Adviser *adviser = [Adviser alloc];
-    
-	[self.advice setText:[adviser getRandomAdvice]];
+	[self.advice setText:[self.adviser getRandomAdvice]];
+}
+- (IBAction)getMore:(id)sender {
+    [self.advice setText:[self.adviser getRandomAdvice]];
 }
 
 - (void)didReceiveMemoryWarning

@@ -11,4 +11,5 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *advice;
 
+@property (weak, nonatomic) IBOutlet UIButton *getMore;
 @end
